@@ -1,0 +1,468 @@
+body {
+margin: 0;
+padding: 0;
+}
+
+
+.startBoard {
+    color: #b0b7bc;
+    display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center;
+            position: absolute;
+            width: 56%;
+            height: 93%;
+            bottom: 1%;
+            border-radius: 25px;
+            background-color: #203640;
+            font-size: 25px;
+           
+}
+
+.choiceP {
+    width: 280px;
+    border-radius: 20px;
+    padding: 7px;
+    font-size: 25px;
+    margin: 8px;
+    color: #1C2B33; 
+    background-color: #08c049;
+}
+
+.choiceP:hover {
+    background-color: #09993c;
+} 
+
+.choiceP:hover::before {
+    content: attr(data-hover); 
+    position: absolute;
+    color: #EEAF41; 
+    font-size: 50px; 
+    pointer-events: none; 
+}
+
+.choiceP:active {
+    scale: 1.02;
+    transition: 0.05s;
+}
+
+.choiceC {
+    width: 280px;
+    border-radius: 20px;
+    padding: 7px;
+    font-size: 25px;
+    margin: 8px;
+    color: #1C2B33; 
+    background-color: #EEAF41;
+}
+
+.choiceC:hover::before {
+    content: attr(data-hover); 
+    position: absolute;
+    color: #EEAF41; 
+    font-size: 50px; 
+    pointer-events: none; 
+}
+
+.choiceC:hover {
+    background-color: #c48d2e;
+} 
+
+.choiceC:active {
+    scale: 1.02;
+    transition: 0.05s;
+}
+
+.gameBoard {
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(10, 50px);
+    padding: 50px;
+}
+
+.board {
+    border: 2px solid #454D52;
+    background-color: #1C2B33;
+    grid-area: 1 / 5 / 14 / 17;
+    height: fit-content;
+    border-radius: 20px;
+    height: 40rem;
+}
+
+
+.diff {
+    background-color: #1C2B33;
+    display: flex;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 10px;
+    justify-content: space-between;
+}
+
+.difficulty {
+    color: #AABFC9;
+    background-color: #454D52;
+ display: flex;
+ flex-direction: row;
+ font-size: 16px;
+ padding: 4px;
+ border: none;
+ border-bottom: 2px solid #454D52;
+ border-radius: 8px;
+ 
+ 
+}
+
+.itemPlayer {
+    display: flex;
+   width: 100%;
+   justify-content: center;
+}
+
+
+
+
+.btnReset {
+    color: #AABFC9;
+    width: 5rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 3px solid #454D52;
+    cursor: pointer;
+    background-color: #1C2B33;
+}
+
+.btnReset:hover {
+    background-color: #254251;
+}
+
+.game {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   width: 100%;
+   margin-top: 5px;
+}
+
+.field {
+    width: 33rem;
+    height: 25rem;
+     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cube {
+    border: 3px solid #454D52;
+    color: white;
+    border-radius: 1rem;
+    background-color: #203640;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    cursor: pointer;
+
+    
+}
+
+.score {
+display: flex;
+
+
+width: 100%;
+height: 60px;
+
+justify-content: space-between;
+}
+
+.scoreX {
+    display: flex;
+    border: 3px solid #454D52;
+    color: #454D52;
+    border-radius: 1rem;
+    background-color: #08c049;
+    width: 165px;
+    height: 60px;
+    justify-content: center;
+    }
+
+.scoreC {
+    display: flex;
+    border: 3px solid #454D52;
+    color: #454D52;
+    border-radius: 1rem;
+    background-color: #dfb119;
+    width: 165px;
+    height: 60px;
+    justify-content: center;
+    }
+
+    .scoreD {
+        display: flex;
+        border: 3px solid #454D52;
+        color: #454D52;
+        border-radius: 1rem;
+        background-color: #808381;
+        width: 165px;
+        height: 60px;
+       
+        justify-content: center;
+        }
+   
+        .nameX {
+            position: relative;
+            font-size: 14px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            left: 10px;
+            
+        }
+        .nameC {
+            position: relative;
+            font-size: 14px;
+            display: flex;
+            flex-direction: row;
+            margin-left: 15px;
+            
+            
+        }
+        .nameD {
+            position: relative;
+            font-size: 14px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+           
+        }
+
+        .pointsX {
+            position: relative;
+            top: 10px;
+            right: 30px;
+        }
+        .pointsD {
+            position: relative;
+            top: 10px;
+            right: 30px;
+        }
+        .pointsC {
+            position: relative;
+            top: 10px;
+            right: 48px;
+        }
+
+        .winnerBoard {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center;
+            position: absolute;
+            width: 55%;
+            height: 68%;
+            bottom: 25%;
+            border-radius: 25px;
+            background-color: #203640;
+           
+            
+
+        }
+
+        .winner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center;
+            position: absolute;
+            top: 25%;
+            width: 35.5%;
+            height: 25%;
+            border-radius: 25px;
+            background-color: #203640;
+            
+            
+        }
+
+        .winnerText {
+            font-size: 40px;
+        }
+
+        .btnText1 {
+            width: 280px;
+            border-radius: 20px;
+            padding: 7px;
+            font-size: 25px;
+            margin: 8px;
+            color: #1C2B33; 
+            background-color: #EEAF41;
+        }
+
+        .btnText1:hover {
+            background-color: #dc9a29;
+        } 
+
+        .btnText1:active {
+            scale: 1.02;
+            transition: 0.05s;
+        }
+
+       
+        .btnText2 {
+            width: 180px;
+            border-radius: 20px;
+            padding: 7px;
+            font-size: 25px;
+            color: #1C2B33;
+            background-color: #ABBEC8;
+        }
+
+        .btnText2:hover {
+            background-color: #9eabb1;
+        }
+
+        .btnText2:active {
+            scale: 1.02;
+        }
+
+        .btnText2:active {
+            scale: 1.02;
+            transition: 0.05s;
+        }
+
+
+        @media (max-width: 768px) {
+    .gameBoard {
+        grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns */
+        grid-template-rows: repeat(10, 1fr); /* Adjust the height of rows */
+        padding: 20px; /* Reduce padding */
+    }
+
+    .board {
+        grid-area: 1 / 1 / 10 / 5; /* Adjust the grid area for the board */
+        
+    }
+
+    .diff {
+        flex-direction: column; /* Stack difficulty selector and button */
+        align-items: center; /* Center items */
+        margin-top: 10px; /* Reduce margin */
+    }
+
+    .difficulty {
+        width: 100%; /* Make the dropdown full width */
+        margin-bottom: 10px; /* Space between dropdown and button */
+    }
+
+    .btnReset {
+        width: 100%; /* Make the button full width */
+    }
+
+    .field {
+        width: 100%; /* Make the field full width */
+        height: auto; /* Allow height to adjust automatically */
+        flex-wrap: wrap; /* Allow wrapping of cubes */
+    }
+
+    .cube {
+        width: 80px; /* Adjust size of cubes */
+        height: 80px; /* Adjust size of cubes */
+        font-size: 3rem; /* Adjust font size for mobile */
+    }
+
+    .score {
+        flex-direction: column; /* Stack scores vertically */
+        align-items: center; /* Center align scores */
+        gap: 10px; /* Add space between scores */
+    }
+
+    .scoreX, .scoreC, .scoreD {
+        width: 100%; /* Make score boxes full width */
+        height: auto; /* Allow height to adjust automatically */
+    }
+
+    .nameX, .nameC, .nameD {
+        font-size: 12px; /* Adjust font size for names */
+    }
+
+.nameX {
+    left: 5px;
+}
+
+.nameD {
+    left: 5px;
+}
+
+
+.pointsD {
+    position: relative;
+  right: 22px;
+}
+
+.pointsC {
+    position: relative;
+  right: 42px;
+}
+
+
+    .pointsX, .pointsC, .pointsD {
+        font-size: 20px; /* Adjust font size for points */
+    }
+
+
+.winner {
+    width: 78%; /* Increase width for better fit on mobile */
+    height: auto; /* Allow height to adjust automatically */
+    top: 20%; /* Adjust top position */
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.winnerText {
+    font-size: 30px; /* Decrease font size for mobile */
+}
+.winnerBoard {
+    width: 89%;
+    height: 60%;
+}
+
+.startBoard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 92%;
+    height: 105vh; /* Full height for mobile */
+    box-sizing: border-box;
+    top: 3%;
+    right: 4%;
+    
+}
+
+.startText {
+    font-size: 2em; /* Responsive font size */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2em; /* Responsive font size */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.choiceP, .choiceC {
+    width: 80%; /* Full width for buttons */
+    padding: 15px; /* Increase padding for easier tapping */
+    font-size: 1.5em; /* Responsive font size */
+    margin: 10px 0; /* Spacing between buttons */
+    cursor: pointer;
+}
+
+}

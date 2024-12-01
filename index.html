@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac</title>
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+    <div class="gameBoard">
+     
+
+      
+        <div class="board">
+
+ <div class="diff">           
+    <select class="difficulty" id="difficulty" name="Levels">
+  <option value="easy">Easy</option>
+  <option value="medium">Medium</option>
+  <option value="hard">Hard</option>
+
+</select>
+ <button class="btnReset">Restart</button>
+
+</div>    
+<div class="itemPlayer">
+   
+</div>
+
+<div class="game">
+  <div class="field">
+  
+
+<button data-index="1" class="cube" id="cube"></button>
+<button data-index="2" class="cube" id="cube"></button>
+<button data-index="3" class="cube" id="cube"></button>
+<button data-index="4" class="cube" id="cube"></button>
+<button data-index="5" class="cube" id="cube"></button>
+<button data-index="6" class="cube" id="cube"></button>
+<button data-index="7" class="cube" id="cube"></button>
+<button data-index="8" class="cube" id="cube"></button>
+<button data-index="9" class="cube" id="cube"></button>
+
+
+<div class="score">
+   
+   
+    <div class="scoreX">
+      <h1 class="nameX">PLAYER X</h1>
+      <h2 class="pointsX">0</h2>
+
+
+    </div>
+
+
+<div class="scoreD">
+    <h1 class="nameD">DRAWS</h1>
+    <h2 class="pointsD">0</h2>
+</div>
+
+<div class="scoreC">
+    <h1 class="nameC">COMPUTER</h1>
+    <h2 class="pointsC">0</h2>
+
+</div> 
+
+</div>
+
+
+
+
+</div>
+<div class="winner"  style="z-index: -1; opacity: 0;" >
+<h1 class="winnerText" >X Takes the Round</h1>
+  <button class="btnText1" onclick="resetGame()">Next Round</button>
+  <button class="btnText2" onclick="quit()">Quit</button>
+
+</div>
+<div class="winnerBoard" style="z-index: -1; opacity: 0;">
+
+  
+
+
+
+  
+</div>
+
+
+
+    </div>
+
+    <div class="startBoard" style="opacity: 1; z-index: 1;">
+      <h1 class="startText">X vs O</h1>
+      
+        <button class="choiceP" id="player2" onclick="choiceP()" >START</button> 
+        
+      
+      </div>
+      
+      
+    
+
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
